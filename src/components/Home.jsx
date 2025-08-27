@@ -344,7 +344,7 @@ const Home = () => {
           <div className="intro-section">
             <div className="intro-content">
               <p className="intro-text">
-                <strong>KALI (Knowledge in AI and Learning Innovation)</strong> is a student-driven club dedicated to exploring and advancing the world of Machine Learning, Artificial Intelligence, and Data Science. At NIT Raipur, the culture of coding and AI exploration is still in its early stages — and KALI is here to change that.
+                <strong>KALI (Knowledge in AI and Learning Innovation)</strong> is a student-driven group dedicated to exploring and advancing the world of Machine Learning, Artificial Intelligence, and Data Science. At NIT Raipur, the culture of coding and AI exploration is still in its early stages — and KALI is here to change that.
               </p>
               <p className="intro-text">
                 Our mission is to ignite curiosity, build skills, and foster innovation in the field of ML/AI by providing a collaborative space where learners of all levels — from beginners to experts — can come together to learn, create, and grow.
@@ -405,7 +405,7 @@ const Home = () => {
             <h3 className="unique-title">What Makes KALI Unique</h3>
             <div className="unique-intro">
               <p className="unique-text">
-                While many clubs stop at coding practice, KALI goes a step further. We believe true growth in Machine Learning comes not just from writing code, but from understanding research, questioning ideas, and building something new from them.
+                While many groups stop at coding practice, KALI goes a step further. We believe true growth in Machine Learning comes not just from writing code, but from understanding research, questioning ideas, and building something new from them.
               </p>
             </div>
 
@@ -441,7 +441,7 @@ const Home = () => {
 
             <div className="conclusion-section">
               <p className="conclusion-text">
-                This blend of learning, discussion, and innovation makes KALI not just a club, but a <strong>launchpad for future researchers, engineers, and innovators</strong> in AI and Machine Learning.
+                This blend of learning, discussion, and innovation makes KALI not just a group, but a <strong>launchpad for future researchers, engineers, and innovators</strong> in AI and Machine Learning.
               </p>
             </div>
           </div>
