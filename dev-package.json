@@ -1,0 +1,16 @@
+{
+  "name": "kali-website-dev-runner",
+  "version": "1.0.0",
+  "description": "Development runner for both frontend and backend",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"npm run dev\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "npm run dev",
+    "install:all": "npm install && cd backend && npm install",
+    "backend": "cd backend && npm run dev",
+    "frontend": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

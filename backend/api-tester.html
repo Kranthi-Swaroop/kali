@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Backend API Tester</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        button { margin: 10px; padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .response { margin: 20px 0; padding: 15px; background: #f8f9fa; border: 1px solid #dee2e6; white-space: pre-wrap; max-height: 400px; overflow-y: auto; }
+        .error { background: #f8d7da; border-color: #f5c6cb; color: #721c24; }
+        .success { background: #d4edda; border-color: #c3e6cb; color: #155724; }
+        h1 { color: #333; }
+        h3 { margin-top: 30px; color: #666; }
+    </style>
+</head>
+<body>
+    <h1>Kali Website Backend API Tester</h1>
+    
+    <h3>Health Check</h3>
+    <button onclick="testEndpoint('/api/health', 'GET')">Test Health Check</button>
+    
+    <h3>Team Endpoints</h3>
+    <button onclick="testEndpoint('/api/team', 'GET')">Get All Team Members</button>
+    <button onclick="testEndpoint('/api/team/1', 'GET')">Get Team Member #1</button>
+    
+    <h3>Project Endpoints</h3>
+    <button onclick="testEndpoint('/api/projects', 'GET')">Get All Projects</button>
+    <button onclick="testEndpoint('/api/projects/1', 'GET')">Get Project #1</button>
+    <button onclick="testEndpoint('/api/projects/meta/categories', 'GET')">Get Categories</button>
+    
+    <h3>Blog Endpoints</h3>
+    <button onclick="testEndpoint('/api/blogs', 'GET')">Get All Blogs</button>
+    <button onclick="testEndpoint('/api/blogs/getting-started-with-ethical-hacking', 'GET')">Get Blog Post</button>
+    <button onclick="testEndpoint('/api/blogs/meta/categories', 'GET')">Get Blog Categories</button>
+    <button onclick="testEndpoint('/api/blogs/meta/tags', 'GET')">Get Blog Tags</button>
+    
+    <h3>Contact Endpoints</h3>
+    <button onclick="testEndpoint('/api/contact/info', 'GET')">Get Contact Info</button>
+    <button onclick="testContactForm()">Test Contact Form</button>
+    
+    <div id="response" class="response" style="display: none;"></div>
+
+    <script>
+        const BASE_URL = 'http://localhost:5000';
+        
+        async function testEndpoint(endpoint, method = 'GET', body = null) {
+            const responseDiv = document.getElementById('response');
+            responseDiv.style.display = 'block';
+            responseDiv.className = 'response';
+            responseDiv.textContent = 'Loading...';
+            
+            try {
+                const options = {
+                    method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                };
+                
+                if (body) {
+                    options.body = JSON.stringify(body);
+                }
+                
+                const response = await fetch(BASE_URL + endpoint, options);
+                const data = await response.json();
+                
+                responseDiv.className = 'response ' + (response.ok ? 'success' : 'error');
+                responseDiv.textContent = `Status: ${response.status}\\n\\nResponse:\\n${JSON.stringify(data, null, 2)}`;
+            } catch (error) {
+                responseDiv.className = 'response error';
+                responseDiv.textContent = `Error: ${error.message}`;
+            }
+        }
+        
+        async function testContactForm() {
+            const testData = {
+                name: 'Test User',
+                email: 'test@example.com',
+                subject: 'API Test',
+                message: 'This is a test message from the API tester.',
+                phone: '+1234567890'
+            };
+            
+            await testEndpoint('/api/contact', 'POST', testData);
+        }
+    </script>
+</body>
+</html>

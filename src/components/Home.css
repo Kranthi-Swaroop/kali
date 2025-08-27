@@ -1,0 +1,982 @@
+/* KALI AI/ML Club - Clean Simple Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Complete reset to override all default and Tailwind styles */
+*, *::before, *::after {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Override global body styles */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  place-items: unset !important;
+  min-width: 100% !important;
+  min-height: 100vh !important;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+#root {
+  min-height: 100vh !important;
+  width: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #000000 !important;
+}
+
+.home {
+  min-height: 100vh !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 4 !important;
+  right: 4 !important;
+  z-index: 1000 !important;
+  padding: 0rem 2rem !important;
+  background: #000000 !important;
+  backdrop-filter: none !important;
+  width: 100% !important;
+}
+
+.nav-container {
+  max-width: 100% !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 1rem !important;
+  width: 100% !important;
+}
+
+.nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.logo {
+  height: 80px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 0 8px rgba(255, 69, 0, 0.6)) !important;
+}
+
+.logo-text {
+  font-family: 'Cinzel', serif !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.6) !important;
+  letter-spacing: 0.2rem !important;
+  transform: translateY(10px) !important;
+}
+
+.logo-k {
+  color: #ff4500 !important;
+}
+
+.logo-ali {
+  color: #ffffff !important;
+}
+
+.nav-menu {
+  display: flex !important;
+  list-style: none !important;
+  gap: 3rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 1px !important;
+  transition: color 0.3s ease !important;
+  text-transform: uppercase !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ff4500 !important;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 0 2rem !important;
+  flex: 1 !important;
+  position: relative !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #000000 0%, #1a0033 30%, #000000 100%) !important;
+  background-image: url('/maa-kali-bg.jpg') !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  overflow: hidden !important;
+}
+
+.hero::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+  z-index: 1 !important;
+}
+
+/* Enhanced Particles System */
+.particles-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
+.hero-content {
+  text-align: center !important;
+  max-width: 800px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.hero-content > * {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Main Title */
+.main-title {
+  font-family: 'Cinzel', serif !important;
+  font-size: clamp(4rem, 12vw, 8rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  margin-bottom: 2rem !important;
+  color: #ff4500 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Subtitle */
+.subtitle {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: clamp(1.4rem, 3.5vw, 2rem) !important;
+  font-weight: 500 !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.05em !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Institution */
+.institution {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+  color: #cccccc !important;
+  margin-bottom: 2rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Tagline */
+.tagline {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem) !important;
+  font-weight: 400 !important;
+  margin-bottom: 3rem !important;
+  color: #cccccc !important;
+  line-height: 1.6 !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-bottom: 4rem !important;
+  width: 100% !important;
+}
+
+.btn {
+  padding: 14px 32px !important;
+  border: none !important;
+  border-radius: 50px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 180px !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff4500, #dc143c) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255, 69, 0, 0.3) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .nav-menu {
+    gap: 1.5rem !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem !important;
+  }
+  
+  .hero {
+    padding: 0 1rem !important;
+    min-height: calc(100vh - 120px) !important;
+    margin-top: 120px !important;
+  }
+  
+  .main-title {
+    letter-spacing: 0.1em !important;
+  }
+  
+  .btn {
+    width: 100% !important;
+    max-width: 250px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem !important;
+  }
+  
+  .nav-menu {
+    gap: 1rem !important;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem !important;
+  }
+  
+  .main-title {
+    letter-spacing: 0.05em !important;
+  }
+  
+  .hero {
+    margin-top: 140px !important;
+    min-height: calc(100vh - 140px) !important;
+  }
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+  padding: 6rem 0 !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+  position: relative !important;
+}
+
+.about-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+}
+
+.about .section-header {
+  text-align: center !important;
+  margin-bottom: 4rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.about .section-title {
+  font-family: 'Cinzel', serif !important;
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 20px rgba(255, 69, 0, 0.8) !important;
+  letter-spacing: 0.3rem !important;
+  margin-bottom: 1rem !important;
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.section-subtitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.1rem !important;
+  color: #ff6666 !important;
+  margin-top: 1rem !important;
+  font-style: italic !important;
+  text-shadow: 0 0 5px rgba(255, 69, 0, 0.5) !important;
+}
+
+.section-divider {
+  width: 80px !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #ff4444, #ff6666, #ff4444) !important;
+  margin: 0 auto !important;
+  border-radius: 2px !important;
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.6) !important;
+}
+
+/* Introduction Section */
+.intro-section {
+  margin-bottom: 4rem !important;
+}
+
+.intro-content {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.intro-text {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+  color: #e0e0e0 !important;
+  margin-bottom: 1.5rem !important;
+  text-align: justify !important;
+}
+
+/* Community Benefits Section */
+.community-section {
+  margin-bottom: 4rem !important;
+}
+
+.community-title {
+  font-family: 'Cinzel', serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 600 !important;
+  color: #ff6666 !important;
+  text-align: center !important;
+  margin-bottom: 3rem !important;
+  text-shadow: 0 0 10px rgba(255, 69, 0, 0.5) !important;
+}
+
+.benefits-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 2rem !important;
+  margin-top: 2rem !important;
+}
+
+.benefit-card {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 15px !important;
+  padding: 2rem !important;
+  text-align: center !important;
+  border: 1px solid rgba(255, 69, 0, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(255, 69, 0, 0.5) !important;
+  box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2) !important;
+}
+
+.benefit-icon {
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+  filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.6)) !important;
+}
+
+.benefit-heading {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 1rem !important;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3) !important;
+}
+
+.benefit-description {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  color: #cccccc !important;
+}
+
+/* Mission Statement */
+.mission-statement {
+  margin: 4rem 0 !important;
+  text-align: center !important;
+}
+
+.mission-highlight {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 3rem !important;
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 69, 0, 0.05)) !important;
+  border-radius: 20px !important;
+  border: 2px solid rgba(255, 69, 0, 0.3) !important;
+  backdrop-filter: blur(15px) !important;
+  box-shadow: 0 0 30px rgba(255, 69, 0, 0.2) !important;
+}
+
+.mission-text {
+  font-family: 'Cinzel', serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 15px rgba(255, 69, 0, 0.8) !important;
+  line-height: 1.6 !important;
+  font-style: italic !important;
+}
+
+/* What Makes KALI Unique Section */
+.unique-section {
+  margin-top: 5rem !important;
+}
+
+.unique-title {
+  font-family: 'Cinzel', serif !important;
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #ff6666 !important;
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+  text-shadow: 0 0 15px rgba(255, 69, 0, 0.6) !important;
+}
+
+.unique-intro {
+  max-width: 900px !important;
+  margin: 0 auto 3rem auto !important;
+  text-align: center !important;
+}
+
+.unique-text {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+  color: #e0e0e0 !important;
+}
+
+.unique-offerings {
+  margin-top: 3rem !important;
+}
+
+.offerings-subtitle {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  margin-bottom: 3rem !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3) !important;
+}
+
+.offerings-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  gap: 2.5rem !important;
+  margin-top: 2rem !important;
+}
+
+.offering-card {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border-radius: 20px !important;
+  padding: 2.5rem !important;
+  text-align: center !important;
+  border: 2px solid rgba(255, 69, 0, 0.3) !important;
+  backdrop-filter: blur(15px) !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.offering-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 69, 0, 0.1), transparent) !important;
+  transition: left 0.6s ease !important;
+}
+
+.offering-card:hover::before {
+  left: 100% !important;
+}
+
+.offering-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(255, 69, 0, 0.6) !important;
+  box-shadow: 0 15px 40px rgba(255, 69, 0, 0.3) !important;
+}
+
+.offering-icon {
+  font-size: 3.5rem !important;
+  margin-bottom: 1.5rem !important;
+  filter: drop-shadow(0 0 15px rgba(255, 69, 0, 0.8)) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.offering-title {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 1.5rem !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.offering-description {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  color: #cccccc !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Conclusion Section */
+.conclusion-section {
+  margin: 4rem 0 2rem 0 !important;
+  text-align: center !important;
+}
+
+.conclusion-text {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.8 !important;
+  color: #e0e0e0 !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+  background: rgba(255, 69, 0, 0.05) !important;
+  border-radius: 15px !important;
+  border: 1px solid rgba(255, 69, 0, 0.2) !important;
+}
+
+.conclusion-text strong {
+  color: #ff6666 !important;
+  text-shadow: 0 0 5px rgba(255, 69, 0, 0.5) !important;
+}
+
+.stat-item {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 10px !important;
+  padding: 1.5rem !important;
+  text-align: center !important;
+  border: 1px solid rgba(255, 69, 0, 0.3) !important;
+}
+
+.stat-number {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 2rem !important;
+  font-weight: 900 !important;
+  color: #ff6666 !important;
+  text-shadow: 0 0 10px rgba(255, 69, 0, 0.8) !important;
+}
+
+.stat-label {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 0 !important;
+  }
+  
+  .about-container {
+    padding: 0 1rem !important;
+  }
+  
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .vision-title,
+  .mission-title,
+  .objectives-title,
+  .relevance-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .objectives-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .relevance-content {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .relevance-stats {
+    flex-direction: row !important;
+    justify-content: space-around !important;
+  }
+  
+  .stat-item {
+    flex: 1 !important;
+    margin: 0 0.5rem !important;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem !important;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ===== ACTIVITIES SECTION ===== */
+.activities {
+  padding: 6rem 0 !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+  position: relative !important;
+}
+
+.activities-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+}
+
+.section-subtitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.1rem !important;
+  color: #cccccc !important;
+  text-align: center !important;
+  max-width: 600px !important;
+  margin: 2rem auto 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* Activities Grid */
+.activities-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 2rem !important;
+  margin-top: 4rem !important;
+}
+
+.activity-card {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 20px !important;
+  padding: 2.5rem !important;
+  text-align: center !important;
+  border: 1px solid rgba(255, 69, 0, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.activity-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 69, 0, 0.1), transparent) !important;
+  transition: left 0.6s ease !important;
+}
+
+.activity-card:hover::before {
+  left: 100% !important;
+}
+
+.activity-card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  border-color: rgba(255, 69, 0, 0.5) !important;
+  box-shadow: 0 20px 40px rgba(255, 69, 0, 0.3) !important;
+}
+
+.activity-icon {
+  font-size: 4rem !important;
+  margin-bottom: 1.5rem !important;
+  filter: drop-shadow(0 0 15px rgba(255, 69, 0, 0.8)) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.activity-card:hover .activity-icon {
+  transform: scale(1.1) rotate(5deg) !important;
+}
+
+.activity-title {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 1.5rem !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+  line-height: 1.2 !important;
+}
+
+.activity-description {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #e0e0e0 !important;
+  margin-bottom: 2rem !important;
+}
+
+.activity-tags {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 0.8rem !important;
+  flex-wrap: wrap !important;
+}
+
+.tag {
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.8), rgba(255, 100, 100, 0.8)) !important;
+  color: #ffffff !important;
+  padding: 0.4rem 1rem !important;
+  border-radius: 20px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.tag:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6) !important;
+}
+
+/* Responsive Design for Activities Section */
+@media (max-width: 768px) {
+  .activities {
+    padding: 4rem 0 !important;
+  }
+  
+  .activities-container {
+    padding: 0 1rem !important;
+  }
+  
+  .activities-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    margin-top: 3rem !important;
+  }
+  
+  .activity-card {
+    padding: 2rem !important;
+  }
+  
+  .activity-icon {
+    font-size: 3rem !important;
+  }
+  
+  .activity-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .activity-description {
+    font-size: 0.95rem !important;
+  }
+  
+  .activity-tags {
+    gap: 0.5rem !important;
+  }
+  
+  .tag {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-card {
+    padding: 1.5rem !important;
+  }
+  
+  .activity-icon {
+    font-size: 2.5rem !important;
+  }
+  
+  .activity-title {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* ===== RESPONSIVE STYLES FOR NEW ABOUT SECTION ===== */
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 0 !important;
+  }
+
+  .about-container {
+    padding: 0 1rem !important;
+  }
+
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+
+  .community-title,
+  .unique-title {
+    font-size: 1.8rem !important;
+  }
+
+  .benefits-grid,
+  .offerings-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .benefit-card,
+  .offering-card {
+    padding: 1.5rem !important;
+  }
+
+  .mission-highlight {
+    padding: 2rem !important;
+  }
+
+  .mission-text {
+    font-size: 1.4rem !important;
+  }
+
+  .intro-text {
+    font-size: 1.05rem !important;
+    text-align: left !important;
+  }
+
+  .unique-text {
+    font-size: 1.05rem !important;
+  }
+
+  .conclusion-text {
+    font-size: 1.1rem !important;
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .community-title,
+  .unique-title {
+    font-size: 1.5rem !important;
+  }
+
+  .offerings-subtitle {
+    font-size: 1.3rem !important;
+  }
+
+  .benefit-card,
+  .offering-card {
+    padding: 1.2rem !important;
+  }
+
+  .benefit-icon,
+  .offering-icon {
+    font-size: 2.5rem !important;
+  }
+
+  .benefit-heading,
+  .offering-title {
+    font-size: 1.2rem !important;
+  }
+
+  .benefit-description,
+  .offering-description {
+    font-size: 0.9rem !important;
+  }
+
+  .mission-highlight {
+    padding: 1.5rem !important;
+  }
+
+  .mission-text {
+    font-size: 1.2rem !important;
+  }
+
+  .intro-text,
+  .unique-text {
+    font-size: 1rem !important;
+  }
+
+  .conclusion-text {
+    font-size: 1rem !important;
+    padding: 1.2rem !important;
+  }
+}

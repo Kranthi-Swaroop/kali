@@ -1,0 +1,602 @@
+/* Projects Page Styles */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+.projects-page {
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Navigation - Same as other pages */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0rem 0;
+  background: #000000;
+  backdrop-filter: none;
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 69, 0, 0.6));
+}
+
+.logo-text {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.6);
+  letter-spacing: 0.2rem;
+  transform: translateY(4px);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ff6666;
+  text-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+}
+
+/* Projects Section */
+.projects-section {
+  padding-top: 120px;
+  padding-bottom: 6rem;
+  background: #000000;
+  min-height: 100vh;
+}
+
+.projects-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.projects-main-title {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 30px rgba(255, 69, 0, 0.8);
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4444, #ff6666, #ff4444);
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+}
+
+.projects-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid rgba(255, 69, 0, 0.3) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(15px) !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+}
+
+.project-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 69, 0, 0.1), transparent) !important;
+  transition: left 0.8s ease !important;
+  z-index: 1 !important;
+}
+
+.project-card:hover::before {
+  left: 100% !important;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  border-color: rgba(255, 69, 0, 0.6) !important;
+  box-shadow: 0 25px 50px rgba(255, 69, 0, 0.3) !important;
+}
+
+/* Project Image */
+.project-image {
+  position: relative !important;
+  height: 200px !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(255, 100, 100, 0.2)) !important;
+}
+
+.project-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.4s ease !important;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.1) !important;
+}
+
+.project-overlay {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+}
+
+.project-status {
+  background: rgba(255, 69, 0, 0.9) !important;
+  color: #ffffff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4) !important;
+}
+
+.project-status.completed {
+  background: rgba(34, 197, 94, 0.9) !important;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4) !important;
+}
+
+.project-status.planning {
+  background: rgba(251, 191, 36, 0.9) !important;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4) !important;
+}
+
+/* Project Content */
+.project-content {
+  padding: 2rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.project-name {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 1rem !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+}
+
+.project-description {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  color: #e0e0e0 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Tech Stack */
+.project-tech-stack {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.8), rgba(255, 100, 100, 0.8)) !important;
+  color: #ffffff !important;
+  padding: 0.3rem 0.8rem !important;
+  border-radius: 15px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 2px 10px rgba(255, 69, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.tech-tag:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 15px rgba(255, 69, 0, 0.5) !important;
+}
+
+/* Project Members */
+.project-members {
+  margin-bottom: 1.5rem !important;
+}
+
+.members-title {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #ff6666 !important;
+  margin-bottom: 0.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.members-list {
+  display: flex !important;
+  gap: 0.5rem !important;
+}
+
+.member-avatar-small {
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.8), rgba(255, 100, 100, 0.8)) !important;
+  border: 2px solid rgba(255, 69, 0, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.member-avatar-small:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.6) !important;
+}
+
+.member-avatar-small span {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Project Links */
+.project-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.8rem !important;
+}
+
+.project-link {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(255, 69, 0, 0.4) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 0.6rem 1.2rem !important;
+  border-radius: 25px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.project-link:hover {
+  background: rgba(255, 69, 0, 0.2) !important;
+  border-color: rgba(255, 69, 0, 0.8) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255, 69, 0, 0.3) !important;
+}
+
+/* Add Project Card */
+.add-project-card {
+  border: 2px dashed rgba(255, 69, 0, 0.5) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 400px !important;
+}
+
+.add-project-content {
+  text-align: center !important;
+  padding: 2rem !important;
+}
+
+.add-project-icon {
+  font-size: 4rem !important;
+  color: rgba(255, 69, 0, 0.8) !important;
+  margin-bottom: 1rem !important;
+  filter: drop-shadow(0 0 15px rgba(255, 69, 0, 0.6)) !important;
+}
+
+.add-project-title {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 1rem !important;
+}
+
+.add-project-description {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1rem !important;
+  color: #cccccc !important;
+  line-height: 1.6 !important;
+  margin-bottom: 2rem !important;
+  max-width: 250px !important;
+}
+
+.add-project-btn {
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.8), rgba(255, 100, 100, 0.8)) !important;
+  border: none !important;
+  color: #ffffff !important;
+  padding: 1rem 2rem !important;
+  border-radius: 25px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4) !important;
+}
+
+.add-project-btn:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 12px 35px rgba(255, 69, 0, 0.6) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-section {
+    padding-top: 100px !important;
+    padding-bottom: 4rem !important;
+  }
+  
+  .projects-container {
+    padding: 0 1rem !important;
+  }
+  
+  .projects-main-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .project-content {
+    padding: 1.5rem !important;
+  }
+  
+  .nav-menu {
+    gap: 1rem !important;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-main-title {
+    font-size: 2rem !important;
+  }
+  
+  .project-image {
+    height: 150px !important;
+  }
+  
+  .project-content {
+    padding: 1rem !important;
+  }
+  
+  .logo {
+    height: 60px !important;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem !important;
+  }
+  
+  .project-links {
+    flex-direction: column !important;
+  }
+  
+  .project-link {
+    text-align: center !important;
+  }
+}
+
+/* Loading and Error States */
+.loading-container {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 4rem 2rem !important;
+}
+
+.loading-spinner {
+  width: 50px !important;
+  height: 50px !important;
+  border: 4px solid rgba(255, 69, 0, 0.3) !important;
+  border-top: 4px solid #ff4500 !important;
+  border-radius: 50% !important;
+  animation: spin 1s linear infinite !important;
+  margin-bottom: 1rem !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) !important; }
+  100% { transform: rotate(360deg) !important; }
+}
+
+.loading-container p {
+  color: #cccccc !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.1rem !important;
+}
+
+.error-container {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 4rem 2rem !important;
+}
+
+.error-message {
+  color: #ff6666 !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+}
+
+.retry-button {
+  background: linear-gradient(135deg, #ff4500, #ff6500) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 0.8rem 1.5rem !important;
+  border-radius: 25px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.retry-button:hover {
+  background: linear-gradient(135deg, #ff6500, #ff7500) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255, 69, 0, 0.3) !important;
+}
+
+/* New Project Features */
+.project-timeline {
+  margin-top: 1rem !important;
+  padding-top: 1rem !important;
+  border-top: 1px solid rgba(255, 69, 0, 0.2) !important;
+}
+
+.timeline-text {
+  color: #cccccc !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-style: italic !important;
+}
+
+.project-achievements {
+  margin-top: 1rem !important;
+}
+
+.achievements-title {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #ff6666 !important;
+  margin-bottom: 0.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.achievements-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+}
+
+.achievement-tag {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.8), rgba(102, 187, 106, 0.8)) !important;
+  color: #ffffff !important;
+  padding: 0.3rem 0.8rem !important;
+  border-radius: 15px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 10px rgba(76, 175, 80, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.achievement-tag:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.5) !important;
+}
+
+/* Status classes */
+.project-status.in-progress {
+  background: rgba(33, 150, 243, 0.9) !important;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4) !important;
+}
+
+.project-status.deployed {
+  background: rgba(156, 39, 176, 0.9) !important;
+  box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4) !important;
+}
+
+.project-status.research {
+  background: rgba(255, 152, 0, 0.9) !important;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4) !important;
+}
