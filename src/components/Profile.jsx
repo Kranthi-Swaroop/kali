@@ -97,7 +97,7 @@ const Profile = () => {
   const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/auth/me', {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}auth/me`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -141,7 +141,7 @@ const Profile = () => {
       const token = localStorage.getItem('token');
       // Add timestamp to prevent caching
       const timestamp = Date.now();
-      const response = await fetch(`http://localhost:5000/api/projects?t=${timestamp}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}projects?t=${timestamp}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Cache-Control': 'no-cache'
@@ -178,7 +178,7 @@ const Profile = () => {
       const token = localStorage.getItem('token');
       // Add timestamp to prevent caching
       const timestamp = Date.now();
-      const response = await fetch(`http://localhost:5000/api/blogs?t=${timestamp}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}blogs?t=${timestamp}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Cache-Control': 'no-cache'
@@ -221,7 +221,7 @@ const Profile = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/projects/${projectId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}projects/${projectId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -247,7 +247,7 @@ const Profile = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/blogs/${blogId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}blogs/${blogId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -292,7 +292,7 @@ const Profile = () => {
         skills: skillsArray
       };
 
-      const response = await fetch('http://localhost:5000/api/auth/profile', {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}auth/profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -343,7 +343,7 @@ const Profile = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/auth/delete-profile', {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}auth/delete-profile`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -516,7 +516,7 @@ const Profile = () => {
                           <div key={project._id} className="content-card">
                             {project.imageUrl && (
                               <img 
-                                src={`http://localhost:5000${project.imageUrl}`} 
+                                src={`${import.meta.env.VITE_API_URI}${project.imageUrl}`} 
                                 alt={project.title}
                                 className="content-image"
                               />

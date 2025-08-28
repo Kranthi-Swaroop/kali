@@ -15,7 +15,7 @@ const Blogs = () => {
     const fetchBlogs = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5000/api/blogs?status=published&limit=20');
+        const response = await fetch(`${import.meta.env.VITE_API_URI}blogs?status=published&limit=20`);
         if (!response.ok) {
           throw new Error('Failed to fetch blogs');
         }
@@ -128,7 +128,7 @@ const Blogs = () => {
       day: 'numeric'
     }),
     readTime: `${blog.readTime || 5} min read`,
-    image: blog.image?.startsWith('/') ? `http://localhost:5000${blog.image}` : blog.image,
+    image: blog.image?.startsWith('/') ? `${import.meta.env.VITE_API_URI}${blog.image}` : blog.image,
     // Format content for HTML display - convert line breaks to paragraphs
     content: blog.content ? formatContentForDisplay(blog.content) : '',
     isDynamic: true
@@ -182,7 +182,7 @@ const Blogs = () => {
     if (blog.isDynamic && blog.slug) {
       // Fetch full blog content for dynamic blogs
       try {
-        const response = await fetch(`http://localhost:5000/api/blogs/${blog.slug}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URI}blogs/${blog.slug}`);
         if (response.ok) {
           const result = await response.json();
           const fullBlog = {

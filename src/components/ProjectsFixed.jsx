@@ -15,7 +15,7 @@ const ProjectsFixed = () => {
   const fetchProjects = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/api/projects');
+      const response = await fetch(`${import.meta.env.VITE_API_URI}projects`);
       const result = await response.json();
       
       if (result.status === 'success' && result.data) {

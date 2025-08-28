@@ -13,8 +13,8 @@ const ProjectsMinimalTest = () => {
     try {
       console.log('Starting fetch...');
       setLoading(true);
-      
-      const response = await fetch('http://localhost:5000/api/projects');
+
+      const response = await fetch(`${import.meta.env.VITE_API_URI}projects`);
       console.log('Response:', response.status, response.statusText);
       
       const result = await response.json();

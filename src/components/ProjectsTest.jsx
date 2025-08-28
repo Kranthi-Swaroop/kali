@@ -8,7 +8,7 @@ const Projects = () => {
 
   useEffect(() => {
     // Simple fetch test
-    fetch('http://localhost:5000/api/projects')
+    fetch(`${import.meta.env.VITE_API_URI}projects`)
       .then(response => response.json())
       .then(result => {
         console.log('Raw API result:', result);

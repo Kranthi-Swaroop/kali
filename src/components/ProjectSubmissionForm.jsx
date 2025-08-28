@@ -40,7 +40,7 @@ const ProjectSubmissionForm = ({ isOpen, onClose, onSubmitSuccess }) => {
 
   const fetchTeamMembers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/team');
+      const response = await fetch(`${import.meta.env.VITE_API_URI}team`);
       const result = await response.json();
       setTeamMembers(result.data || result.teamMembers || []);
     } catch (error) {
@@ -161,7 +161,7 @@ const ProjectSubmissionForm = ({ isOpen, onClose, onSubmitSuccess }) => {
       delete projectData.liveUrl;
       delete projectData.researchPaperUrl;
 
-      const response = await fetch('http://localhost:5000/api/projects', {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}projects`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

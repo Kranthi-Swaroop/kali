@@ -37,7 +37,7 @@ const ProjectSubmissionFormSimple = ({ isOpen, onClose, onSubmitSuccess }) => {
         category: 'AI/ML'
       };
 
-      const response = await fetch('http://localhost:5000/api/projects', {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}projects`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

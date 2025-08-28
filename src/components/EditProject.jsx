@@ -43,7 +43,7 @@ const EditProject = () => {
       console.log('Auth headers:', getAuthHeaders());
       console.log('Current user:', user);
       
-      const response = await fetch(`http://localhost:5000/api/projects/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}projects/${id}`, {
         headers: getAuthHeaders()
       });
 
@@ -178,7 +178,7 @@ const EditProject = () => {
       // Remove Content-Type header to let browser set it with boundary for FormData
       delete headers['Content-Type'];
       
-      const response = await fetch(`http://localhost:5000/api/projects/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}projects/${id}`, {
         method: 'PUT',
         headers: headers,
         body: formDataToSend

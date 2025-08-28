@@ -17,7 +17,7 @@ const Admin = () => {
     setError(null);
     
     try {
-      const response = await fetch(`http://localhost:5000/api/${type}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URI}${type}`);
       const result = await response.json();
       
       if (response.ok) {
@@ -51,7 +51,7 @@ const Admin = () => {
 
   const handleDelete = async (type, id, title) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/${type}/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}${type}/${id}`, {
         method: 'DELETE',
       });
       
@@ -74,7 +74,7 @@ const Admin = () => {
 
   const handleApplicationAction = async (id, action, applicantName) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/applications/${id}/${action}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URI}applications/${id}/${action}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
