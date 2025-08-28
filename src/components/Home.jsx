@@ -302,7 +302,6 @@ const Home = () => {
             <li><Link to="/blogs" className="nav-link">BLOGS</Link></li>
             <li><Link to="/profile" className="nav-link">PROFILE</Link></li>
             <li><Link to="/join-us" className="nav-link">JOIN US</Link></li>
-            <li><a href="#contact" className="nav-link">CONTACT</a></li>
           </ul>
         </div>
       </nav>
