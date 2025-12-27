@@ -56,13 +56,13 @@ const Team = () => {
             <div className="architects-grid">
               <div className="member-card architect-card">
                 <div className="member-avatar">
-                  <div className="avatar-placeholder">SR</div>
+                  <div className="avatar-placeholder">KS</div>
                 </div>
-                <h4 className="member-name">Sundram Rai</h4>
+                <h4 className="member-name">B Kranthi Swaroop</h4>
                 <h5 className="member-role">Vision Architect</h5>
-                <p className="member-details">3rd Year, Electrical Engineering</p>
+                <p className="member-details">2nd Year, Computer Science & Engineering</p>
                 <div className="member-description">
-                  Designing the strategic vision and future roadmap for the club's AI initiatives.
+                  Transforming visual data into intelligence through cutting-edge Computer Vision and AI systems.
                 </div>
               </div>
 
@@ -80,25 +80,37 @@ const Team = () => {
 
               <div className="member-card architect-card">
                 <div className="member-avatar">
-                  <div className="avatar-placeholder">SR</div>
+                  <div className="avatar-placeholder">CG</div>
                 </div>
-                <h4 className="member-name">Sundram Rai</h4>
-                <h5 className="member-role">Policy Architect</h5>
-                <p className="member-details">3rd Year, Electrical Engineering</p>
+                <h4 className="member-name">Chirag Garg</h4>
+                <h5 className="member-role">Theoretical Architect</h5>
+                <p className="member-details">4th Year, Computer Science & Engineering</p>
                 <div className="member-description">
-                  Developing ethical AI policies and governance frameworks for responsible innovation.
+                  Specializing in theoretical foundations of AI, algorithms, and mathematical modeling for intelligent systems.
                 </div>
               </div>
 
               <div className="member-card architect-card">
                 <div className="member-avatar">
-                  <div className="avatar-placeholder">CG</div>
+                  <div className="avatar-placeholder">AKS</div>
                 </div>
-                <h4 className="member-name">Chirag Garg</h4>
+                <h4 className="member-name">Aditya Kumar Sahu</h4>
                 <h5 className="member-role">Generative Architect</h5>
-                <p className="member-details">4th Year, Computer Science & Engineering</p>
+                <p className="member-details">2nd Year, Computer Science & Engineering</p>
                 <div className="member-description">
                   Leading generative AI research and implementation of creative AI solutions.
+                </div>
+              </div>
+
+              <div className="member-card architect-card">
+                <div className="member-avatar">
+                  <div className="avatar-placeholder">SK</div>
+                </div>
+                <h4 className="member-name">Samriddhi Khare</h4>
+                <h5 className="member-role">Data Science Architect</h5>
+                <p className="member-details">4th Year, Civil Engineering</p>
+                <div className="member-description">
+                  Specializing in Data Science, statistical analysis, and data-driven decision-making for intelligent systems.
                 </div>
               </div>
             </div>
@@ -110,11 +122,11 @@ const Team = () => {
             <div className="neurons-grid">
               <div className="member-card neuron-card">
                 <div className="member-avatar neuron-avatar">
-                  <div className="avatar-placeholder">BK</div>
+                  <div className="avatar-placeholder">PS</div>
                 </div>
-                <h4 className="member-name">B Kranthi Swaroop</h4>
+                <h4 className="member-name">Pankaj Sahu</h4>
                 <h5 className="member-role">Neuron</h5>
-                <p className="member-details">2nd Year, Computer Science & Engineering</p>
+                <p className="member-details">2nd Year, Electronics & Communication Engineering</p>
               </div>
 
               <div className="member-card neuron-card">
@@ -124,15 +136,6 @@ const Team = () => {
                 <h4 className="member-name">Rahul Sharma</h4>
                 <h5 className="member-role">Neuron</h5>
                 <p className="member-details">2nd Year, Bio Medical Engineering</p>
-              </div>
-
-              <div className="member-card neuron-card">
-                <div className="member-avatar neuron-avatar">
-                  <div className="avatar-placeholder">AS</div>
-                </div>
-                <h4 className="member-name">Aditya Kumar Sahu</h4>
-                <h5 className="member-role">Neuron</h5>
-                <p className="member-details">2nd Year, Computer Science & Engineering</p>
               </div>
             </div>
           </div>

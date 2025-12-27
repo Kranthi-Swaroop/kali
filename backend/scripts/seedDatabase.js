@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import TeamMember from '../models/TeamMember.js';
 import Project from '../models/Project.js';
 import BlogPost from '../models/BlogPost.js';
+import User from '../models/User.js';
 import connectDB from '../config/database.js';
 
 // Load environment variables
@@ -18,6 +19,20 @@ const seedData = async () => {
     await TeamMember.deleteMany({});
     await Project.deleteMany({});
     await BlogPost.deleteMany({});
+    await User.deleteMany({});
+
+    // Create a seed user
+    console.log('👤 Creating seed user...');
+    const seedUser = await User.create({
+      email: "admin@kali-team.com",
+      password: "password123", // This will be hashed by the model
+      profile: {
+        firstName: "Admin",
+        lastName: "User",
+        bio: "System administrator"
+      },
+      role: "admin"
+    });
 
     // Seed Team Members
     console.log('👥 Seeding team members...');
@@ -81,7 +96,11 @@ const seedData = async () => {
           "Mobile notifications",
           "Access logs"
         ],
-        teamMembers: [teamMembers[0]._id, teamMembers[2]._id],
+        teamMembers: [
+          { name: teamMembers[0].name, role: teamMembers[0].role },
+          { name: teamMembers[2].name, role: teamMembers[2].role }
+        ],
+        createdBy: seedUser._id,
         priority: "High"
       },
       {
@@ -103,7 +122,11 @@ const seedData = async () => {
           "Alert system",
           "Reporting tools"
         ],
-        teamMembers: [teamMembers[1]._id, teamMembers[2]._id],
+        teamMembers: [
+          { name: teamMembers[1].name, role: teamMembers[1].role },
+          { name: teamMembers[2].name, role: teamMembers[2].role }
+        ],
+        createdBy: seedUser._id,
         priority: "High"
       },
       {
@@ -123,7 +146,10 @@ const seedData = async () => {
           "Report generation",
           "Integration with existing tools"
         ],
-        teamMembers: [teamMembers[0]._id],
+        teamMembers: [
+          { name: teamMembers[0].name, role: teamMembers[0].role }
+        ],
+        createdBy: seedUser._id,
         priority: "Medium"
       }
     ]);
@@ -168,7 +194,8 @@ Ethical hacking is a rewarding career path that helps make the digital world saf
         readTime: 8,
         featured: true,
         image: "/api/placeholder/800/400",
-        status: "published"
+        status: "published",
+        createdBy: seedUser._id
       },
       {
         title: "Advanced Penetration Testing Techniques",
@@ -213,7 +240,8 @@ Always ensure you have proper authorization before conducting any penetration te
         readTime: 12,
         featured: false,
         image: "/api/placeholder/800/400",
-        status: "published"
+        status: "published",
+        createdBy: seedUser._id
       },
       {
         title: "Building Secure Web Applications",
@@ -258,7 +286,8 @@ Building secure applications requires a comprehensive approach throughout the de
         readTime: 10,
         featured: true,
         image: "/api/placeholder/800/400",
-        status: "published"
+        status: "published",
+        createdBy: seedUser._id
       }
     ]);
 
